@@ -12,6 +12,16 @@
 					<h1 class="font-weight-bold mb-4 font-size-60">{{ .title | markdownify }}</h1>
 					<p class="mb-4">{{ .content | markdownify }}</p>
 					{{- end }}
+
+            <!-- Boton Ecwid -->
+            <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-209292221" itemtype="http://schema.org/Product" data-single-product-id="209292221">
+            <div class="ecsp-title" itemprop="name" style="display:none;" content="Pagina Web estatica sencilla"></div>
+            <div customprop="addtobag"></div>
+            </div>
+            <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?31577002&data_platform=singleproduct_v2" charset="utf-8"></script>
+            <script type="text/javascript">xProduct()</script>
+
+
 					<button class="snipcart-add-item btn btn-main" 
 					  {{with .Site.Data.homepage.product }} data-item-id="{{ .name | urlize }}__{{ .price }}"
 						data-item-name="{{ .name }}"
@@ -27,8 +37,7 @@
 						{{ end }}{{ end }}>{{ .Site.Data.homepage.banner.button }}</button>
 				</div>
 
-            <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-209292221" itemtype="http://schema.org/Product" data-single-product-id="209292221"><div class="ecsp-title" itemprop="name" style="display:none;" content="Pagina Web estatica sencilla"></div><div customprop="addtobag"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?31577002&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>
-
+            
 			</div>
 		</div><!-- .row close -->
 	</div><!-- .container close -->
