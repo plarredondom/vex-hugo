@@ -14,12 +14,14 @@
 					{{- end }}
 
             <!-- Boton Ecwid -->
+            <!--
             <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-209292221" itemtype="http://schema.org/Product" data-single-product-id="209292221">
             <div class="ecsp-title" itemprop="name" style="display:none;" content="Pagina Web estatica sencilla"></div>
             <div customprop="addtobag"></div>
             </div>
             <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?31577002&data_platform=singleproduct_v2" charset="utf-8"></script>
             <script type="text/javascript">xProduct()</script>
+            -->
 
              <!-- Boton Snipcart -->
              <!-- 
@@ -37,6 +39,14 @@
 						data-item-custom2-options="{{ range $index, $element:= .sizes }}{{ if eq $index 0 }}{{ . | title }}{{ else }}|{{ . | title }}{{ end }}{{ end }}"
 						{{ end }}{{ end }}>{{ .Site.Data.homepage.banner.button }}</button>
                 -->
+
+            <!-- Boton para ir a la tienda -->
+
+                {{ if .button.enable }}
+                    {{ with .button }}
+                        <a href="{{ .link | absURL }}" class="btn btn-main btn-main-sm">{{ .label }}</a>
+                    {{ end }}
+                {{ end }}
 
 				</div>
 
