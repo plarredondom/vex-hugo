@@ -1,4 +1,5 @@
-{{ if .Site.Data.homepage.promo.enable }}
+{{ if .Site.Data.homepage.tienda.enable }}
+{{- with .Site.Data.homepage.tienda }}
 
 <section class="section" id="tienda">
 
@@ -20,5 +21,5 @@
 </div>
 </section>
 
-
+{{- end }}
 {{ end }}
